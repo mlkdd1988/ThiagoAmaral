@@ -12,6 +12,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
+
 /* POST /aluno Cadastro de usuário */
 router.post('/', function(req, res, next) {
   Aluno.create(req.body, function (err, post) {

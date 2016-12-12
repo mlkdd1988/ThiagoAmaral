@@ -9,3 +9,4 @@ var AlunoSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Aluno', AlunoSchema);
+
