@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
-/* POST /usuario Cadastro de usuário */
+/* POST /jogador Cadastro de usuário */
 router.post('/', function(req, res, next) {
   Jogador.create(req.body, function (err, post) {
     if (err) return next(err);
@@ -20,7 +20,7 @@ router.post('/', function(req, res, next) {
   });
 });
 
-/* GET /usuario/id  Lista filtrada por um usuário*/
+/* GET /jogador/id  Lista filtrada por um usuário*/
 router.get('/:id', function(req, res, next) {
   Jogador.findById(req.params.id, function (err, post) {
     if (err) return next(err);
@@ -28,7 +28,7 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
-/* PUT /usuario/:id Salva a edição de usuário */
+/* PUT /jogador/:id Salva a edição de usuário */
 router.put('/:id', function(req, res, next) {
   Jogador.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
@@ -36,7 +36,7 @@ router.put('/:id', function(req, res, next) {
   });
 });
 
-/* DELETE /usuario/:id Deletando o usuário a partir do id */
+/* DELETE /jogador/:id Deletando o usuário a partir do id */
 router.delete('/:id', function(req, res, next) {
   Jogador.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);

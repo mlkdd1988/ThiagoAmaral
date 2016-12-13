@@ -8,11 +8,11 @@ var Time = require('../models/Time.js');
 router.get('/', function(req, res, next) {
   Time.find(function (err, time) {
     if (err) return next(err);
-    res.json(usuario);
+    res.json(time);
   });
 });
 
-/* POST /usuario Cadastro de usuário */
+/* POST /time Cadastro de usuário */
 router.post('/', function(req, res, next) {
   Time.create(req.body, function (err, post) {
     if (err) return next(err);
@@ -20,7 +20,7 @@ router.post('/', function(req, res, next) {
   });
 });
 
-/* GET /usuario/id  Lista filtrada por um usuário*/
+/* GET /time/id  Lista filtrada por um usuário*/
 router.get('/:id', function(req, res, next) {
   Time.findById(req.params.id, function (err, post) {
     if (err) return next(err);
@@ -28,7 +28,7 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
-/* PUT /usuario/:id Salva a edição de usuário */
+/* PUT /time/:id Salva a edição de usuário */
 router.put('/:id', function(req, res, next) {
   Time.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
@@ -36,7 +36,7 @@ router.put('/:id', function(req, res, next) {
   });
 });
 
-/* DELETE /usuario/:id Deletando o usuário a partir do id */
+/* DELETE /time/:id Deletando o usuário a partir do id */
 router.delete('/:id', function(req, res, next) {
   Time.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
