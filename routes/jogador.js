@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var mongoose = require('mongoose');
-var Jogador = require('../models/jogador.js');
+var Jogador = require('../models/Jogador');
 
 /* GET /time Listagem de usuários. */
 router.get('/', function(req, res, next) {
