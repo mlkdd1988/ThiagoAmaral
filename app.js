@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var usuario = require('./routes/usuario');
 var perfil = require('./routes/perfil');
-var aluno = require('./routes/aluno');
-var jogador = require('./routes/jogador');
+var perfil = require('./routes/jogador');
+var perfil = require('./routes/time');
 
 var mongoose = require('mongoose');
 
@@ -56,8 +56,9 @@ app.use(function(req, res, next) {
 app.use('/', routes);
 app.use('/usuario', usuario);
 app.use('/perfil', perfil);
-app.use('/aluno', aluno);
-app.use('/jogador', jogador);
+app.use('/jogador', perfil);
+app.use('/time', perfil);
+
 
 
 //Configuração de páginas não encontradas
@@ -88,7 +89,6 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 
 
 module.exports = app;

@@ -3,18 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Users/thiago.amaral/Desktop/Angular2/projeto7/app/home/components/home.component.ts</file>
-            <file>file:/D:/Users/thiago.amaral/Desktop/Angular2/projeto7/app/jogador/mock/mock.jogadores.ts</file>
-            <file>file:/D:/Users/thiago.amaral/Desktop/Angular2/projeto7/app/perfil/templates/perfil.template.html</file>
-            <file>file:/D:/Users/thiago.amaral/Desktop/Angular2/projeto7/app/config/app.component.ts</file>
-            <file>file:/D:/Users/thiago.amaral/Desktop/Angular2/projeto7/app/jogador/components/jogador.component.ts</file>
-            <file>file:/D:/Users/thiago.amaral/Desktop/Angular2/projeto7/app/perfil/templates/perfil.template.form.html</file>
-            <file>file:/D:/Users/thiago.amaral/Desktop/Angular2/projeto7/app/jogador/templates/jogador.template.html</file>
-            <file>file:/D:/Users/thiago.amaral/Desktop/Angular2/projeto7/app/config/module/app.module.ts</file>
-            <file>file:/D:/Users/thiago.amaral/Desktop/Angular2/projeto7/app/jogador/service/jogador.service.ts</file>
-            <file>file:/D:/Users/thiago.amaral/Desktop/Angular2/projeto7/app/config/routes/routes.ts</file>
-            <file>file:/D:/Users/thiago.amaral/Desktop/Angular2/projeto7/app/jogador/interfaces/jogador.interface.ts</file>
-            <file>file:/D:/Users/thiago.amaral/Desktop/Angular2/projeto7/app/jogador/class/jogador.ts</file>
+            <file>file:/home/nataniel/Documents/Dissemine/restfull-node-mongo-master/bin/www</file>
+            <file>file:/home/nataniel/Documents/Dissemine/restfull-node-mongo-master/routes/usuario.js</file>
+            <file>file:/home/nataniel/Documents/Dissemine/restfull-node-mongo-master/models/Usuario.js</file>
+            <file>file:/home/nataniel/Documents/Dissemine/restfull-node-mongo-master/app.js</file>
+            <file>file:/home/nataniel/Documents/Dissemine/restfull-node-mongo-master/routes/index.js</file>
+            <file>file:/home/nataniel/Documents/Dissemine/restfull-node-mongo-master/package.json</file>
         </group>
     </open-files>
 </project-private>
