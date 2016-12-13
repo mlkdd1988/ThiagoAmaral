@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 var mongoose = require('mongoose');
-var Usuario = require('../models/Jogador.js');
+var Time = require('../models/Time.js');
 
 /* GET /time Listagem de usuários. */
 router.get('/', function(req, res, next) {
-  Usuario.find(function (err, usuario) {
+  Time.find(function (err, usuario) {
     if (err) return next(err);
     res.json(usuario);
   });
@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 
 /* POST /usuario Cadastro de usuário */
 router.post('/', function(req, res, next) {
-  Usuario.create(req.body, function (err, post) {
+  Time.create(req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {
 
 /* GET /usuario/id  Lista filtrada por um usuário*/
 router.get('/:id', function(req, res, next) {
-  Usuario.findById(req.params.id, function (err, post) {
+  Time.findById(req.params.id, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
@@ -30,7 +30,7 @@ router.get('/:id', function(req, res, next) {
 
 /* PUT /usuario/:id Salva a edição de usuário */
 router.put('/:id', function(req, res, next) {
-  Usuario.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+  Time.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
@@ -38,7 +38,7 @@ router.put('/:id', function(req, res, next) {
 
 /* DELETE /usuario/:id Deletando o usuário a partir do id */
 router.delete('/:id', function(req, res, next) {
-  Usuario.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+  Time.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
