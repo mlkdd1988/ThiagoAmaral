@@ -6,7 +6,7 @@ var Time = require('../models/Time.js');
 
 /* GET /time Listagem de usuários. */
 router.get('/', function(req, res, next) {
-  Time.find(function (err, usuario) {
+  Time.find(function (err, time) {
     if (err) return next(err);
     res.json(usuario);
   });

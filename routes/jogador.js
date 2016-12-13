@@ -6,9 +6,9 @@ var Jogador = require('../models/Jogador.js');
 
 /* GET /time Listagem de usuários. */
 router.get('/', function(req, res, next) {
-  Jogador.find(function (err, usuario) {
+  Jogador.find(function (err, jogador) {
     if (err) return next(err);
-    res.json(usuario);
+    res.json(jogador);
   });
 });
 
