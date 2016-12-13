@@ -1,0 +1,55 @@
+<h2>Exemplo de jogadores</h2>
+<div class="form-group col-md-6">
+    <label>nome</label>
+    <input class="form-control" [(ngModel)]="jogadorObject.nome"   />
+</div>
+<div class="form-group col-md-6">
+    <label>idade</label>
+    <input class="form-control" [(ngModel)]="jogadorObject.idade"   />
+</div>
+<div class="form-group col-md-6">
+    <label>time</label>
+    <input class="form-control" [(ngModel)]="jogadorObject.time"   />
+</div>
+<div *ngIf="!edit" class="form-group col-md-3">
+    <button class="btn btn-primary" (click)="salvarJogador(jogadorObject)">Incluir</button>
+</div>
+<div *ngIf="edit" class="form-group col-md-3">
+    <button class="btn btn-primary" (click)="editarJogador(jogadorObject, true)">Editar</button>
+</div>
+<table class="table table-hover table-striped">
+    <tr>
+        <th>
+            _id
+        </th>
+        <th>
+            nome
+        </th>
+        <th>
+            idade
+        </th>
+        <th>
+            time
+        </th>   
+      </tr>
+    <tr *ngFor="let jogador of jogadores; let i = index">
+        <td>
+            {{jogador._id}}
+        </td>
+        <td>
+            {{jogador.nome}}
+        </td>
+        <td>
+            {{jogador.idade}}
+        </td>
+        <td>
+            {{jogador.time}}
+        </td>
+         <td>
+            <button class="btn btn-primary" (click)="editarJogador(jogador)">Editar</button>
+        </td>
+        <td>
+            <button class="btn btn-danger" (click)="deletarJogador(jogador._id, i)">Deletar</button>
+        </td>
+    </tr>
+</table>

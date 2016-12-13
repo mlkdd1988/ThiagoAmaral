@@ -1,0 +1,86 @@
+<h2>Exemplo de times</h2>
+<div class="form-group col-md-6">
+    <label>nome</label>
+    <input class="form-control" [(ngModel)]="timeObject.nome"   />
+</div>
+<div class="form-group col-md-6">
+    <label>idade</label>
+    <input class="form-control" [(ngModel)]="timeObject.idade"   />
+</div>
+<div class="form-group col-md-6">
+    <label>hino</label>
+    <input class="form-control" [(ngModel)]="timeObject.hino"   />
+</div>
+<div class="form-group col-md-6">
+    <label>qtdeTorcedores</label>
+    <input class="form-control" [(ngModel)]="timeObject.qtdeTorcedores"   />
+</div>
+<div class="form-group col-md-6">
+    <label>nomeDoMascote</label>
+    <input class="form-control" [(ngModel)]="timeObject.nomeDoMascote"   />
+</div>
+<div class="form-group col-md-6">
+    <label>valorPatrimonio</label>
+    <input class="form-control" [(ngModel)]="timeObject.valorPatrimonio"   />
+</div>
+<div *ngIf="!edit" class="form-group col-md-3">
+    <button class="btn btn-primary" (click)="salvarTime(timeObject)">Incluir</button>
+</div>
+<div *ngIf="edit" class="form-group col-md-3">
+    <button class="btn btn-primary" (click)="editarTime(timeObject, true)">Editar</button>
+</div>
+
+<table class="table table-hover table-striped">
+    <tr>
+        <th>
+            _id
+        </th>
+        <th>
+            nome
+        </th>
+        <th>
+            idade
+        </th>
+        <th>
+            hino
+        </th>   
+        <th>
+            qtdeTorcedores
+        </th>
+        <th>
+            nomeDoMascote
+        </th>
+        <th>
+            valorPatrimonio
+        </th>   
+      </tr>
+    <tr *ngFor="let time of times; let i = index">
+        <td>
+            {{time._id}}
+        </td>
+        <td>
+            {{time.nome}}
+        </td>
+        <td>
+            {{time.idade}}
+        </td>
+        <td>
+            {{time.hino}}
+        </td>
+        <td>
+            {{time.qtdeTorcedores}}
+        </td>
+        <td>
+            {{time.nomeDoMascote}}
+        </td>
+        <td>
+            {{time.valorPatrimonio}}
+        </td>        
+         <td>
+            <button class="btn btn-primary" (click)="editarTime(time)">Editar</button>
+        </td>
+        <td>
+            <button class="btn btn-danger" (click)="deletarTime(time._id, i)">Deletar</button>
+        </td>
+    </tr>
+</table>
