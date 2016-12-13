@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var mongoose = require('mongoose');
-var Time = require('../models/Time');
+var Time = require('../models/Time.js');
 
 /* GET /time Listagem de usuários. */
 router.get('/', function(req, res, next) {
