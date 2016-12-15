@@ -8,6 +8,7 @@ var routes = require('./routes/index');
 var usuario = require('./routes/usuario');
 var perfil = require('./routes/perfil');
 var jogador = require('./routes/jogador');
+var treinador = require('./routes/treinador');
 var time = require('./routes/time');
 
 var mongoose = require('mongoose');
@@ -57,6 +58,7 @@ app.use('/', routes);
 app.use('/usuario', usuario);
 app.use('/perfil', perfil);
 app.use('/jogador', jogador);
+app.use('/treinador', treinador);
 app.use('/time', time);
 
 
