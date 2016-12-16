@@ -7,14 +7,11 @@ var routes = require('./routes/index');
 var usuario = require('./routes/usuario');
 var perfil = require('./routes/perfil');
 var jogador = require('./routes/jogador');
-var treinador = require('./routes/treinador');
 var time = require('./routes/time');
 var mongoose = require('mongoose');
 
 var cors = require('cors')
 var login = require('./routes/login');
-
-
 
 //Connexão com o banco de dados MongoDB
 mongoose.connect('mongodb://demo:demo@ds163417.mlab.com:63417/db_projeto', function(err) {
