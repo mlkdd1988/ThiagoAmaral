@@ -3,15 +3,18 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var routes = require('./routes/index');
 var usuario = require('./routes/usuario');
 var perfil = require('./routes/perfil');
 var jogador = require('./routes/jogador');
 var treinador = require('./routes/treinador');
 var time = require('./routes/time');
-
 var mongoose = require('mongoose');
+
+var cors = require('cors')
+var login = require('./routes/login');
+
+
 
 //Connexão com o banco de dados MongoDB
 mongoose.connect('mongodb://demo:demo@ds163417.mlab.com:63417/db_projeto', function(err) {
@@ -39,6 +42,14 @@ app.use(bodyParser.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', routes);
+app.use('/usuario', usuario);
+app.use('/perfil', perfil);
+app.use('/jogador', jogador);
+app.use('/treinador', treinador);
+app.use('/time', time);
+app.use('/login', login);
+
 // // Add headers
 app.use(function(req, res, next) {
 
@@ -53,15 +64,6 @@ app.use(function(req, res, next) {
         next();
     }
 });
-
-app.use('/', routes);
-app.use('/usuario', usuario);
-app.use('/perfil', perfil);
-app.use('/jogador', jogador);
-app.use('/treinador', treinador);
-app.use('/time', time);
-
-
 
 //Configuração de páginas não encontradas
 app.use(function(req, res, next) {

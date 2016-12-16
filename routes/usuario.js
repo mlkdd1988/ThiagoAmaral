@@ -1,11 +1,12 @@
 var express = require('express');
 var router = express.Router();
+var auth = require('./auth');
 
 var mongoose = require('mongoose');
 var Usuario = require('../models/Usuario.js');
 
 /* GET /usuario Listagem de usuários. */
-router.get('/', function(req, res, next) {
+router.route('/').get(auth, function(req, res, next) {
   Usuario.find(function (err, usuario) {
     if (err) return next(err);
     res.json(usuario);
