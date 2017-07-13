@@ -1,6 +1,6 @@
 {
   "name": "restNode",
-  "version": "1.0.0",
+  "version": "8.1.X",
   "private": true,
   "description":"Projeto Rest NodeJS para utilizar com a aula de AngularJS",
   "scripts": {
